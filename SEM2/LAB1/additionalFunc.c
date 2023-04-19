@@ -1,3 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "additionalFunc.h"
+
 float randfloatfrom(float min, float max) {
     float range = (max - min);
     float div = RAND_MAX / range;
