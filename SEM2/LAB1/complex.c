@@ -1,3 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "complex.h"
+
 void* createC() {
     void* res = malloc(sizeof(Complex));
     (*((Complex*) res)).ring = Create(sizeof(Complex), sumC, /*minusC,*/ multC, skalmultC);
