@@ -1,3 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "float.h"
+
+
 void* createF() {
     void* res = malloc(sizeof(Float));
     (*((Float*) res)).ring = Create(sizeof(Float), sumF, /*minusF,*/ multF, skalmultF);
