@@ -1,3 +1,4 @@
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -25,3 +26,4 @@ void SWAP(void* a, void* b, size_t len) {
         q[i] = tmp;
     }
 }
+*/
