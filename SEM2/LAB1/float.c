@@ -1,3 +1,4 @@
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -6,7 +7,7 @@
 
 void* createF() {
     void* res = malloc(sizeof(Float));
-    (*((Float*) res)).ring = Create(sizeof(Float), sumF, /*minusF,*/ multF, skalmultF);
+    (*((Float*) res)).ring = Create(sizeof(Float), sumF, multF, skalmultF);
     return res;
 }
 
@@ -15,13 +16,13 @@ void* sumF(void* F1, void* F2) {
     (*((Float*) res)).f = (*((Float*) F1)).f + (*((Float*) F2)).f;
 	return res;
 }
-/*
+
 void* minusF(void* F1, void* F2) {
 	void* res = createF();
     (*((Float*) res)).f = (*((Float*) F1)).f - (*((Float*) F2)).f;
 	return res;
 }
-*/
+
 
 void* multF(void* F1, void* F2) {
 	void* res = createF();
@@ -49,4 +50,4 @@ Float gen_Float() {
 void print_Float(Float F) {
     printf("%6.2f", F.f);
 }
-
+*/
