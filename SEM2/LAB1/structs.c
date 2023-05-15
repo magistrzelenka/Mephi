@@ -1,3 +1,4 @@
+/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -10,13 +11,13 @@ void* createM() {
     *((struct Matrix*) res).ring = Create(sizeof(struct Matrix), sumM, minusM, multM, skalmultM);
     return res;
 }
-*/
+
 struct Matrix gen_Matrix(int Size, int Type) {
     //int Size, Type;
     /*
     printf(">>>Enter Size and Type of Matrix: ");
     scanf("%d %d", &Size, &Type);
-    */
+    
     struct Matrix M;
     // int Type = rand() % 2 + 1;  // may be...
     M.elem_type = Type;
@@ -57,7 +58,7 @@ void print_Matrix(struct Matrix M) {
         }
         printf("\n");
     }
-    */
+    
     //printf("[\n");
     printf("\n");
     for (int i = 0; i < Size; ++i) {
@@ -166,7 +167,7 @@ struct Matrix minusM(struct Matrix M1, struct Matrix M2) {
         terminate_and_exit(2);
     }
 }
-*/
+
 
 
 struct Matrix multM(struct Matrix M1, struct Matrix M2) { //Wrong
