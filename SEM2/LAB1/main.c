@@ -2,7 +2,13 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <time.h>
-#include "test.h"
+
+#include "RingInfo.h"
+#include "complex.h"
+#include "float.h"
+#include "Matrix.h"
+#include "exit.h"
+//#include "test.h"
 
 
 void menu(struct Matrix* M_data);
@@ -11,39 +17,10 @@ void menu(struct Matrix* M_data);
 int main() {
 
     srand(time(NULL));
-    //ZEROS_and_ONES_create();
 
     printf(">>>Hello! This program is made to test struct Square Matrix (SEM2LAB1VAR12).\n");
     struct Matrix* M_data;
-/*
-    Float F1 = gen_Float();
-    Float F2 = gen_Float();
-    print_Float(F1);
-    print_Float(F2);
-    Float F3;
-    F3 = *((Float*) F1.ring->mult(&F1, &F2));
-    print_Float(F3);
-*/
-    //menu(M_data);
-    TEST();
-/*
-    void** A;
-    A = calloc(5, sizeof(void*));
-    for (int i = 0; i < 5; ++i) {
-        A[i] = malloc(sizeof(Float));
-        Float F;
-        F.f = randfrom(-100, 100);
-        (*((Float*) A[i])) = F;
-    }
-    for (int i = 0; i < 5; ++i) {
-        printf("%f ", (*((Float*) A[i])).f);
-    }
-    printf("\n");
-    for (int i = 0; i < 5; ++i) {
-        printf("%p ", A[i]);
-    }
-    printf("\n");
-*/
+    menu(M_data);
 
     return 0;
 }
@@ -84,6 +61,7 @@ void menu(struct Matrix* M_data) {
             print_Matrix(M_data[ind]);
             printf("\n");
             break;
+
         case 3:
             printf(">>>Enter indexes of 2 matrices: ");
             scanf("%d%d", &ind1, &ind2);
@@ -92,6 +70,7 @@ void menu(struct Matrix* M_data) {
             cnt++;
             printf("\n");
             break;
+
         case 4:
             printf(">>>Enter indexes of 2 matrices: ");
             scanf("%d%d", &ind1, &ind2);
@@ -100,6 +79,7 @@ void menu(struct Matrix* M_data) {
             cnt++;
             printf("\n");
             break;
+
         case 5:
             double x;
             printf(">>>Enter index of matrix and scalar: ");
